@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+    - shell: echo "Hello ansible world!"
+    - apt: pkg=vim state=present update_cache=yes
+  	with_items:
+   	- vim-tiny
+    	- git
+    - apt: name=virtualbox
+    - apt: name=go
+    - apt: name=python-cloud
+     
